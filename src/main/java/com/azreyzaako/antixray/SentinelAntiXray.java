@@ -153,7 +153,9 @@ public final class SentinelAntiXray extends JavaPlugin {
                         }
                     } finally {
                         running = false;
-                        timer.cancel();
+                        if (timer != null) {
+                            timer.cancel();
+                        }
                     }
                 } catch (Throwable t) {
                     if (throwable == null) {
@@ -162,13 +164,15 @@ public final class SentinelAntiXray extends JavaPlugin {
                         throwable.addSuppressed(t);
                     }
                 } finally {
-                    executorService.shutdownNow();
+                    if (executorService != null) {
+                        executorService.shutdownNow();
 
-                    try {
-                        executorService.awaitTermination(1000L, TimeUnit.MILLISECONDS);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                        throw new RuntimeException(e);
+                        try {
+                            executorService.awaitTermination(1000L, TimeUnit.MILLISECONDS);
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                            throw new RuntimeException(e);
+                        }
                     }
                 }
             } catch (Throwable t) {
