@@ -25,7 +25,7 @@ public final class RayTraceTimerTask extends TimerTask {
 
         }
 
-        if (timingsEnabled) {
+        if (timingsEnabled && !plugin.getPlayerData().isEmpty()) {
             long stop = System.currentTimeMillis();
             plugin.getLogger().info((stop - start) + "ms per ray trace tick.");
         }
