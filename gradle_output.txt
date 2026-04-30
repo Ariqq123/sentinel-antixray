@@ -1,0 +1,410 @@
+openjdk version "21.0.11" 2026-04-21
+OpenJDK Runtime Environment (build 21.0.11+10-1-deb13u2-Debian)
+OpenJDK 64-Bit Server VM (build 21.0.11+10-1-deb13u2-Debian, mixed mode, sharing)
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :paperweightUserdevSetup UP-TO-DATE
+
+> Task :compileJava
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:15: error: cannot find symbol
+import org.bukkit.craftbukkit.CraftWorld;
+                             ^
+  symbol:   class CraftWorld
+  location: package org.bukkit.craftbukkit
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:16: error: package org.bukkit.craftbukkit.entity does not exist
+import org.bukkit.craftbukkit.entity.CraftEntity;
+                                    ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:9: error: cannot find symbol
+import org.bukkit.craftbukkit.CraftWorld;
+                             ^
+  symbol:   class CraftWorld
+  location: package org.bukkit.craftbukkit
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:10: error: package org.bukkit.craftbukkit.entity does not exist
+import org.bukkit.craftbukkit.entity.CraftPlayer;
+                                    ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:11: error: cannot find symbol
+import org.bukkit.craftbukkit.CraftWorld;
+                             ^
+  symbol:   class CraftWorld
+  location: package org.bukkit.craftbukkit
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:34: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+import net.minecraft.world.level.chunk.PaletteResize;
+                                      ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:32: error: cannot find symbol
+import net.minecraft.resources.Identifier;
+                              ^
+  symbol:   class Identifier
+  location: package net.minecraft.resources
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:50: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+import net.minecraft.world.level.chunk.PaletteResize;
+                                      ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:1036: error: cannot find symbol
+    public void onBlockChange(Level level, BlockPos blockPos, BlockState newBlockState, BlockState oldBlockState, @Block.UpdateFlags int flags, int maxUpdateDepth) {
+                                                                                                                        ^
+  symbol:   class UpdateFlags
+  location: class Block
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:289: error: cannot find symbol
+        AntiXray antiXray = ((CraftWorld) world).getHandle().paperConfig().anticheat.antiXray;
+                              ^
+  symbol:   class CraftWorld
+  location: class SentinelAntiXray
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:328: error: cannot find symbol
+        ChunkPacketBlockController chunkPacketBlockController = ((CraftWorld) world).getHandle().chunkPacketBlockController;
+                                                                  ^
+  symbol:   class CraftWorld
+  location: class SentinelAntiXray
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:354: error: cannot find symbol
+        ServerLevel serverLevel = ((CraftWorld) location.getWorld()).getHandle();
+                                    ^
+  symbol:   class CraftWorld
+  location: class SentinelAntiXray
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:355: error: cannot find symbol
+        net.minecraft.world.entity.Entity handle = ((CraftEntity) entity).getHandle();
+                                                     ^
+  symbol:   class CraftEntity
+  location: class SentinelAntiXray
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:73: error: cannot find symbol
+        ServerLevel serverLevel = ((CraftWorld) world).getHandle();
+                                    ^
+  symbol:   class CraftWorld
+  location: class UpdateBukkitRunnable
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:133: error: cannot find symbol
+        ServerGamePacketListenerImpl connection = ((CraftPlayer) player).getHandle().connection;
+                                                    ^
+  symbol:   class CraftPlayer
+  location: class UpdateBukkitRunnable
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:50: error: cannot find symbol
+        ChunkPacketBlockController chunkPacketBlockController = ((CraftWorld) playerData.getLocations()[0].getWorld()).getHandle().chunkPacketBlockController;
+                                                                  ^
+  symbol:   class CraftWorld
+  location: class RayTraceCallable
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:97: error: cannot find symbol
+                    int minSectionY = chunk.getMinSectionY();
+                                           ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:99: error: cannot find symbol
+                    if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                   ^
+  symbol:   method getMaxSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:104: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                    return section != null && !section.hasOnlyAir() && solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())]; // Sections aren't null anymore. Unfortunately, LevelChunkSection#recalcBlockCounts() temporarily resets #nonEmptyBlockCount to 0 due to a Paper optimization.
+                                                                                                                                                                                       ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:114: error: cannot find symbol
+                    int minSectionY = chunk.getMinSectionY();
+                                           ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:116: error: cannot find symbol
+                    if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                   ^
+  symbol:   method getMaxSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:121: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                    return section != null && !section.hasOnlyAir() && solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())]; // Sections aren't null anymore. Unfortunately, LevelChunkSection#recalcBlockCounts() temporarily resets #nonEmptyBlockCount to 0 due to a Paper optimization.
+                                                                                                                                                                                       ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:128: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                       ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:157: error: cannot find symbol
+                    int minSectionY = chunk.getMinSectionY();
+                                           ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:159: error: cannot find symbol
+                    if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                   ^
+  symbol:   method getMaxSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:175: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                    return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                           ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:186: error: cannot find symbol
+                    int minSectionY = chunk.getMinSectionY();
+                                           ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:188: error: cannot find symbol
+                    if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                   ^
+  symbol:   method getMaxSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:204: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                    return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                           ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:211: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                       ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:217: error: cannot find symbol
+                section = chunk.getSections()[sectionY - chunk.getMinSectionY()];
+                                                              ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:110: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+            presetBlockStateBitsStoneGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.STONE.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                          ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:111: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+            presetBlockStateBitsDeepslateGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.DEEPSLATE.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                                  ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:112: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+            presetBlockStateBitsNetherrackGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.NETHERRACK.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                                    ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:113: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+            presetBlockStateBitsEndStoneGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.END_STONE.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                                 ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:139: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                presetBlockStateBitsGlobal[i] = GLOBAL_BLOCKSTATE_PALETTE.idFor(presetBlockStatesFull[i], PaletteResize.noResizeExpected());
+                                                                                                          ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:154: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                    obfuscateGlobal[GLOBAL_BLOCKSTATE_PALETTE.idFor(blockState, PaletteResize.noResizeExpected())] = true;
+                                                                                ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:165: error: cannot find symbol
+                Block block = BuiltInRegistries.BLOCK.getOptional(Identifier.parse(id)).orElse(null);
+                                                                  ^
+  symbol:   variable Identifier
+  location: class ChunkPacketBlockControllerAntiXray
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:171: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                        int blockStateId = GLOBAL_BLOCKSTATE_PALETTE.idFor(blockState, PaletteResize.noResizeExpected());
+                                                                                       ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:304: error: cannot find symbol
+        int maxChunkSectionIndex = Math.min((maxBlockHeight >> 4) - chunk.getMinSectionY(), chunk.getSectionsCount()) - 1;
+                                                                         ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:371: error: cannot find symbol
+                                presetBlockStateBitsTemp = chunkSectionIndex + chunk.getMinSectionY() < 0 ? presetBlockStateBitsDeepslateGlobal : presetBlockStateBitsStoneGlobal;
+                                                                                    ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:384: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                        presetBlockStateBitsTemp[i] = chunkPacketInfoAntiXray.getPalette(chunkSectionIndex).idFor(presetBlockStatesFull[i], PaletteResize.noResizeExpected());
+                                                                                                                                            ^
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:413: error: cannot find symbol
+                    obfuscateLayer(chunk.getPos(), chunk.getMinSectionY(), chunkSectionIndex, -1, bitStorageReader, bitStorageWriter, solidTemp, obfuscateTemp, traceTemp, blockEntityTemp, presetBlockStateBitsTemp, current, next, nextNext, traceCache, blockEntityCache, emptyNearbyChunkSections, random, blocks, blockEntities);
+                                                        ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:429: error: cannot find symbol
+                    obfuscateLayer(chunk.getPos(), chunk.getMinSectionY(), chunkSectionIndex, y, bitStorageReader, bitStorageWriter, solidTemp, obfuscateTemp, traceTemp, blockEntityTemp, presetBlockStateBitsTemp, current, next, nextNext, traceCache, blockEntityCache, nearbyChunkSections, random, blocks, blockEntities);
+                                                        ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+/root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:454: error: cannot find symbol
+                    obfuscateLayer(chunk.getPos(), chunk.getMinSectionY(), chunkSectionIndex, 15, bitStorageReader, bitStorageWriter, solid, obfuscateTemp, traceTemp, blockEntityTemp, presetBlockStateBitsTemp, current, next, nextNext, traceCache, blockEntityCache, nearbyChunkSections, random, blocks, blockEntities);
+                                                        ^
+  symbol:   method getMinSectionY()
+  location: variable chunk of type LevelChunk
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+45 errors
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///root/workspace/plugins/sentinel-antixray/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:15: error: cannot find symbol
+  import org.bukkit.craftbukkit.CraftWorld;
+                               ^
+    symbol:   class CraftWorld
+    location: package org.bukkit.craftbukkit
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:16: error: package org.bukkit.craftbukkit.entity does not exist
+  import org.bukkit.craftbukkit.entity.CraftEntity;
+                                      ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:9: error: cannot find symbol
+  import org.bukkit.craftbukkit.CraftWorld;
+                               ^
+    symbol:   class CraftWorld
+    location: package org.bukkit.craftbukkit
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:10: error: package org.bukkit.craftbukkit.entity does not exist
+  import org.bukkit.craftbukkit.entity.CraftPlayer;
+                                      ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:11: error: cannot find symbol
+  import org.bukkit.craftbukkit.CraftWorld;
+                               ^
+    symbol:   class CraftWorld
+    location: package org.bukkit.craftbukkit
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:34: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+  import net.minecraft.world.level.chunk.PaletteResize;
+                                        ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:32: error: cannot find symbol
+  import net.minecraft.resources.Identifier;
+                                ^
+    symbol:   class Identifier
+    location: package net.minecraft.resources
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:50: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+  import net.minecraft.world.level.chunk.PaletteResize;
+                                        ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:1036: error: cannot find symbol
+      public void onBlockChange(Level level, BlockPos blockPos, BlockState newBlockState, BlockState oldBlockState, @Block.UpdateFlags int flags, int maxUpdateDepth) {
+                                                                                                                          ^
+    symbol:   class UpdateFlags
+    location: class Block
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:289: error: cannot find symbol
+          AntiXray antiXray = ((CraftWorld) world).getHandle().paperConfig().anticheat.antiXray;
+                                ^
+    symbol:   class CraftWorld
+    location: class SentinelAntiXray
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:328: error: cannot find symbol
+          ChunkPacketBlockController chunkPacketBlockController = ((CraftWorld) world).getHandle().chunkPacketBlockController;
+                                                                    ^
+    symbol:   class CraftWorld
+    location: class SentinelAntiXray
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:354: error: cannot find symbol
+          ServerLevel serverLevel = ((CraftWorld) location.getWorld()).getHandle();
+                                      ^
+    symbol:   class CraftWorld
+    location: class SentinelAntiXray
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/SentinelAntiXray.java:355: error: cannot find symbol
+          net.minecraft.world.entity.Entity handle = ((CraftEntity) entity).getHandle();
+                                                       ^
+    symbol:   class CraftEntity
+    location: class SentinelAntiXray
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:73: error: cannot find symbol
+          ServerLevel serverLevel = ((CraftWorld) world).getHandle();
+                                      ^
+    symbol:   class CraftWorld
+    location: class UpdateBukkitRunnable
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/UpdateBukkitRunnable.java:133: error: cannot find symbol
+          ServerGamePacketListenerImpl connection = ((CraftPlayer) player).getHandle().connection;
+                                                      ^
+    symbol:   class CraftPlayer
+    location: class UpdateBukkitRunnable
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:50: error: cannot find symbol
+          ChunkPacketBlockController chunkPacketBlockController = ((CraftWorld) playerData.getLocations()[0].getWorld()).getHandle().chunkPacketBlockController;
+                                                                    ^
+    symbol:   class CraftWorld
+    location: class RayTraceCallable
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:97: error: cannot find symbol
+                      int minSectionY = chunk.getMinSectionY();
+                                             ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:99: error: cannot find symbol
+                      if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                     ^
+    symbol:   method getMaxSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:104: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                      return section != null && !section.hasOnlyAir() && solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())]; // Sections aren't null anymore. Unfortunately, LevelChunkSection#recalcBlockCounts() temporarily resets #nonEmptyBlockCount to 0 due to a Paper optimization.
+                                                                                                                                                                                         ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:114: error: cannot find symbol
+                      int minSectionY = chunk.getMinSectionY();
+                                             ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:116: error: cannot find symbol
+                      if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                     ^
+    symbol:   method getMaxSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:121: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                      return section != null && !section.hasOnlyAir() && solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())]; // Sections aren't null anymore. Unfortunately, LevelChunkSection#recalcBlockCounts() temporarily resets #nonEmptyBlockCount to 0 due to a Paper optimization.
+                                                                                                                                                                                         ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:128: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                  return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                         ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:157: error: cannot find symbol
+                      int minSectionY = chunk.getMinSectionY();
+                                             ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:159: error: cannot find symbol
+                      if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                     ^
+    symbol:   method getMaxSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:175: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                      return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                             ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:186: error: cannot find symbol
+                      int minSectionY = chunk.getMinSectionY();
+                                             ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:188: error: cannot find symbol
+                      if (sectionY < minSectionY || sectionY >= chunk.getMaxSectionY()) {
+                                                                     ^
+    symbol:   method getMaxSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:204: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                      return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                             ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:211: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                  return solidGlobal[ChunkPacketBlockControllerAntiXray.GLOBAL_BLOCKSTATE_PALETTE.idFor(getBlockState(section, x, y, z), PaletteResize.noResizeExpected())];
+                                                                                                                                         ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/tasks/RayTraceCallable.java:217: error: cannot find symbol
+                  section = chunk.getSections()[sectionY - chunk.getMinSectionY()];
+                                                                ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:110: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+              presetBlockStateBitsStoneGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.STONE.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                            ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:111: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+              presetBlockStateBitsDeepslateGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.DEEPSLATE.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                                    ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:112: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+              presetBlockStateBitsNetherrackGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.NETHERRACK.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                                      ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:113: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+              presetBlockStateBitsEndStoneGlobal = new int[]{GLOBAL_BLOCKSTATE_PALETTE.idFor(Blocks.END_STONE.defaultBlockState(), PaletteResize.noResizeExpected())};
+                                                                                                                                   ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:139: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                  presetBlockStateBitsGlobal[i] = GLOBAL_BLOCKSTATE_PALETTE.idFor(presetBlockStatesFull[i], PaletteResize.noResizeExpected());
+                                                                                                            ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:154: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                      obfuscateGlobal[GLOBAL_BLOCKSTATE_PALETTE.idFor(blockState, PaletteResize.noResizeExpected())] = true;
+                                                                                  ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:165: error: cannot find symbol
+                  Block block = BuiltInRegistries.BLOCK.getOptional(Identifier.parse(id)).orElse(null);
+                                                                    ^
+    symbol:   variable Identifier
+    location: class ChunkPacketBlockControllerAntiXray
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:171: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                          int blockStateId = GLOBAL_BLOCKSTATE_PALETTE.idFor(blockState, PaletteResize.noResizeExpected());
+                                                                                         ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:304: error: cannot find symbol
+          int maxChunkSectionIndex = Math.min((maxBlockHeight >> 4) - chunk.getMinSectionY(), chunk.getSectionsCount()) - 1;
+                                                                           ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:371: error: cannot find symbol
+                                  presetBlockStateBitsTemp = chunkSectionIndex + chunk.getMinSectionY() < 0 ? presetBlockStateBitsDeepslateGlobal : presetBlockStateBitsStoneGlobal;
+                                                                                      ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:384: error: PaletteResize is not public in net.minecraft.world.level.chunk; cannot be accessed from outside package
+                          presetBlockStateBitsTemp[i] = chunkPacketInfoAntiXray.getPalette(chunkSectionIndex).idFor(presetBlockStatesFull[i], PaletteResize.noResizeExpected());
+                                                                                                                                              ^
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:413: error: cannot find symbol
+                      obfuscateLayer(chunk.getPos(), chunk.getMinSectionY(), chunkSectionIndex, -1, bitStorageReader, bitStorageWriter, solidTemp, obfuscateTemp, traceTemp, blockEntityTemp, presetBlockStateBitsTemp, current, next, nextNext, traceCache, blockEntityCache, emptyNearbyChunkSections, random, blocks, blockEntities);
+                                                          ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:429: error: cannot find symbol
+                      obfuscateLayer(chunk.getPos(), chunk.getMinSectionY(), chunkSectionIndex, y, bitStorageReader, bitStorageWriter, solidTemp, obfuscateTemp, traceTemp, blockEntityTemp, presetBlockStateBitsTemp, current, next, nextNext, traceCache, blockEntityCache, nearbyChunkSections, random, blocks, blockEntities);
+                                                          ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  /root/workspace/plugins/sentinel-antixray/src/main/java/com/antigravity/antixray/antixray/ChunkPacketBlockControllerAntiXray.java:454: error: cannot find symbol
+                      obfuscateLayer(chunk.getPos(), chunk.getMinSectionY(), chunkSectionIndex, 15, bitStorageReader, bitStorageWriter, solid, obfuscateTemp, traceTemp, blockEntityTemp, presetBlockStateBitsTemp, current, next, nextNext, traceCache, blockEntityCache, nearbyChunkSections, random, blocks, blockEntities);
+                                                          ^
+    symbol:   method getMinSectionY()
+    location: variable chunk of type LevelChunk
+  Note: Some input files use or override a deprecated API.
+  Note: Recompile with -Xlint:deprecation for details.
+  45 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 20s
+3 actionable tasks: 2 executed, 1 up-to-date
