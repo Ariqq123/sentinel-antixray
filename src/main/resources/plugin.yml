@@ -1,0 +1,27 @@
+name: SentinelAntiXray
+version: 1.0
+main: com.antigravity.antixray.SentinelAntiXray
+api-version: 1.20
+author: azreyzaako
+depend: [ProtocolLib]
+commands:
+  sentinelantixray:
+    description: Sentinel Anti-Xray main command.
+    permission: sentinel.antixray.command
+    aliases: [sax, sentinelax]
+permissions:
+  sentinel.antixray.command:
+    description: Allows the use of the sentinelantixray command.
+    default: op
+  sentinel.antixray.timings:
+    description: Allows the use of the timings command.
+    default: op
+  sentinel.antixray.alerts:
+    description: Receive staff alerts for heuristic anti-xray detection.
+    default: op
+  sentinel.antixray.bypass:
+    description: Bypass the ray-tracing obfuscation engine.
+    default: op
+  sentinel.antixray.admin:
+    description: Access the Sentinel admin GUI and reload command.
+    default: op
